@@ -39,12 +39,12 @@ struct CKBasicsView: View {
             HStack {
                 Picker("ck-textalignment".localized, selection: $observedData.args.messageAlignment.value) {
                     Text("").tag("")
-                    ForEach(observedData.appProperties.allignmentStates.keys.sorted(), id: \.self) {
+                    ForEach(observedData.appProperties.alignmentStates.keys.sorted(), id: \.self) {
                         Text($0)
                     }
                 }
                 .onChange(of: observedData.args.messageAlignment.value) {
-                    observedData.appProperties.messageAlignment = observedData.appProperties.allignmentStates[$0] ?? .leading
+                    observedData.appProperties.messageAlignment = observedData.appProperties.alignmentStates[$0] ?? .leading
                     observedData.args.messageAlignment.present = true
                 }
                 Toggle("ck-verticalposition".localized, isOn: $observedData.args.messageVerticalAlignment.present)

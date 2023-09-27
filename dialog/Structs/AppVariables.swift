@@ -18,7 +18,7 @@ struct AppVariables {
     var messageAlignment: TextAlignment = .leading
     var helpAlignment: TextAlignment = .leading
     let messageAlignmentTextRepresentation = String("left")
-    let allignmentStates: [String: TextAlignment] = ["left": .leading,
+    let alignmentStates: [String: TextAlignment] = ["left": .leading,
                                                       "right": .trailing,
                                                       "centre": .center,
                                                       "center": .center]
